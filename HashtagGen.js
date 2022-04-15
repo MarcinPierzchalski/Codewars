@@ -1,9 +1,19 @@
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
+
 function generateHashtag (str) {
-    let arr = str.split('')
+    let arr = str.split(' ')
+    let res = []
     console.log(arr)
     for(let i=0; i<arr.length;i++){
-        if((arr[i] == '') || (arr[i] == ' ')) return false
+        if((arr[i] !== '') && (arr[i] !== ' ')){
+            res.push(capitalizeFirstLetter(arr[i]))}
+
     }
+    res.unshift('#')
+    return res.join('')
   }
 
 
