@@ -25,5 +25,17 @@ function cakes(recipe, available) {
   let available = {flour: 1200, sugar: 1200, eggs: 5, milk: 200};
 
 
+  function cakes(recipe, available) {
+    return Object.keys(recipe).reduce(function(val, ingredient) {
+      return Math.min(Math.floor(available[ingredient] / recipe[ingredient] || 0), val)
+    }, Infinity)  
+  }
+
+  const cakes = (needs, has) => Math.min(
+    ...Object.keys(needs).map(key => Math.floor(has[key] / needs[key] || 0))
+  )
+
+
+
 
   console.log(cakes(recipe, available))
