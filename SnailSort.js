@@ -1,3 +1,5 @@
+// to jest to przeanalizowania...
+
 function snail(array){
     let result = [];
     let row = 0;
