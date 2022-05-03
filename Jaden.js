@@ -1,3 +1,5 @@
 String.prototype.toJadenCase = function () {
-    //...how to do this?
+    console.log(this.toLowerCase())
   };
+
+  'TEST'.toJadenCase()
