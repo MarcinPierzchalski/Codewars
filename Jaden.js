@@ -1,5 +1,5 @@
 String.prototype.toJadenCase = function () {
-    console.log(this.toLowerCase())
+    return(this.split(' ').map(x => x[0].toUpperCase()+x.slice(1)).join(' '))
   };
 
-  'TEST'.toJadenCase()
+  'try me now'.toJadenCase()
